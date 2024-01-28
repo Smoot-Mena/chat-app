@@ -5,7 +5,7 @@ const ChatHome = ( {room, setRoom, username, setUsername, socket} ) => {
     const navigate = useNavigate();
 
     const joinRoom = () => {
-        room !== "" && username !== "" ? socket.emit("join-room", {username, room}): null;
+        room !== "" && username !== "" ? socket.emit("join_room", {username, room}): null;
 
         navigate("/chatroom", {replace: true});
     };

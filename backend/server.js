@@ -10,7 +10,7 @@ const mongoConfig = require("./config");
 
 mongoConfig();
 
-const PORT = 5173;
+const PORT = 3216;
 
 // Middleware
 app.use(cors());
@@ -29,14 +29,48 @@ app.get("/", (req, res) => {
     res.send("<h1>Root Page</h1>");
 });
 
+const CHAT_BOT = "ChatBot";
+let chatRoom = "";
+let allUsers = []; // all of the current users in the chat room
+
+// Listening for when a user connects to Socket.IO
 io.on("connection", (socket) => {
     console.log(`User connected: ${socket.id}`);
+
+    // Add a user to a room
+    socket.on("join_room", (data) => {
+        const {username, room} = data; // from frontend useStates
+        socket.join(room); // the user joins a socket room
+
+        let _createdTime = Date.now(); // Adds timestamp
+        // Sends public message to all users at once, except newbies
+        socket.to(room).emit("receive_message", {
+            message: `${username} has just entered the chat room`,
+            username: CHAT_BOT,
+            _createdTime
+        });
+
+        // Sends a welcome message to the newbie only
+        socket.emit("receive_message", {
+            message: `Welcome ${username}`,
+            username: CHAT_BOT,
+            _createdTime,
+        });
+
+        // Save the new user to the room
+        chatRoom = room;
+        allUsers.push( {id: socket.id, username, room} );
+        let chatRoomUsers = allUsers.filter((user) => user.room === room);
+        socket.to(room).emit("chatroom_users", chatRoomUsers);
+        socket.emit("chatroom_users", chatRoomUsers);
+    });
 });
 
-// app.listen(PORT, () => {
-//     console.log(`Listening to port ${PORT}...`);
-// });
+app.listen(PORT, () => {
+    console.log(`Listening to port ${PORT}...`);
+});
 
-server.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}...`);
+// Listening to Socket.IO 
+server.listen(5175, () => {
+    console.log(`Server running on port 5175...`);
 });

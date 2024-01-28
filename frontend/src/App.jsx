@@ -7,8 +7,9 @@ import SignUp from "./pages/SignUp";
 import ChatHome from "./pages/ChatHome";
 import { useState } from "react";
 import io from "socket.io-client";
+import ChatRoom from "./pages/ChatRoom";
 
-const socket = io.connect("http://localhost:5173");
+const socket = io.connect("http://localhost:5175");
 
 function App() {
   const [username, setUsername] = useState("");
@@ -22,7 +23,8 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/login" element={<Login />}/>
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/chathome" element={<ChatHome username={username} setUsername={setUsername} room={room} setRoom={setRoom} socket={socket} />} /> 
+        <Route path="/chathome" element={<ChatHome username={username} setUsername={setUsername} room={room} setRoom={setRoom} socket={socket} />} />
+        <Route path="/chatroom" element={<ChatRoom username={username} room={room} socket={socket} />} />
       </Routes>
     </section>
   )
