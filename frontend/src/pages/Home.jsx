@@ -160,7 +160,7 @@ const Home = () => {
                 </ul>
             </nav>
             <nav style={{
-                width: "10vw",
+                width: "200px",
                 backgroundColor: "lightgrey",
                 boxShadow: "2px 2px 2px black"
             }}>
@@ -218,20 +218,34 @@ const Home = () => {
                 top: "20vh",
                 left: "25vw",
                 boxShadow: "2px 2px 2px black",
-                width: "40vw",
+                width: "800px",
                 minWidth: "700px",
                 display: "flex",
                 flexFlow: "row wrap"
             }}>
                 <header style={{
-                    backgroundImage: "linear-gradient(to right, dodgerblue, darkblue, snow)",
+                    backgroundImage: "linear-gradient(to right, mediumblue, darkblue)",
                     color: "snow",
                     fontWeight: "bold",
                     // textAlign: "center",
                     display: "flex",
-                    justifyContent: "space-evenly",
+                    justifyContent: "space-around",
                     width: "inherit"
-                }}>Welcome to FAM <span>{time}</span> <span style={{ color: "yellow" }}>Weather</span></header>
+                }}>Welcome to FAM<span>{time}</span><span style={{ color: "yellow" }}>Weather</span>
+                <section style={{ backgroundColor: "lightgrey" }}>
+                    <span style={{
+                        color: "black",
+                        fontWeight: "bold",
+                        padding: "0 6px",
+                        boxShadow: "1px 1px 2px black",
+                    }}>_</span><span style={{
+                        color: "black",
+                        fontWeight: "bold",
+                        padding: "0 6px",
+                        boxShadow: "1px 1px 2px black",
+                    }}>X</span>
+                </section>
+                </header>
                 <section style={{
                     backgroundColor: "dodgerblue",
                     color: "snow",
@@ -250,34 +264,32 @@ const Home = () => {
                         <li style={{ fontWeight: "bold" }}><p style={{ fontSize: "2em" }}>🗨️</p>Chat or Nah?</li>
                     </ul>
                 </section>
-                <section>
+                <section style={{ padding: "10px", display: "flex", gap: "20px", width: "500px" }}>
+                    <article style={{ 
+                        width: "200px",
+                        }}>
+                        <figure>
+                            <img src="src/assets/city-skyline.jpg" alt="Skyline" width="150px"/>
+                            <figcaption style={{ fontWeight: "bold" }}>Rental Prices Climb</figcaption>
+                        </figure>
+                        <p style={{ color: "blue", textDecoration: "underline" }}>Top 10 cities list</p>
+                    </article>
                     <article>
                         <figure>
-                            <img src="" alt="" />
-                            <figcaption></figcaption>
+                            <img src="src/assets/white-outfit.jpg" alt="Fashion trends" width="150px"/>
+                            <figcaption style={{ fontWeight: "bold" }}>Fashion Trends</figcaption>
+                            <p style={{ color: "purple", textDecoration: "underline" }}>Hot new styles here</p>
                         </figure>
+                    </article>
+                    <article>
+                        <p>Top 10 Songs of the Month</p>
+                        <p></p>
                         <p></p>
                     </article>
                     <article>
-                        <figure>
-                            <img src="" alt="" />
-                            <figcaption></figcaption>
-                            <p></p>
-                        </figure>
-                    </article>
-                    <article>
-                        <figure>
-                            <img src="" alt="" />
-                            <figcaption></figcaption>
-                            <p></p>
-                        </figure>
-                    </article>
-                    <article>
-                        <figure>
-                            <img src="" alt="" />
-                            <figcaption></figcaption>
-                            <p></p>
-                        </figure>
+                        <p>Top 10 Songs of the Month</p>
+                        <p></p>
+                        <p></p>
                     </article>
                     <article>
                         <figure>
@@ -295,7 +307,10 @@ const Home = () => {
                     </article>
                 </section>
                 <section style={{
-                    width: "150px"
+                    width: "150px",
+                    // position: "absolute",
+                    // top: "3vh",
+                    // right: "0"
                 }}>
                     <header>Yo' Places</header>
                     <ul style={{ listStyle: "none" }}>
@@ -313,7 +328,11 @@ const Home = () => {
                     </ul>
                 </section>
             </main>
-            <section>
+            <section style={{
+                position: "absolute",
+                top: "12vh",
+                right: "0"
+            }}>
                 <header>Pal List</header>
                 <ul>
                     <li>Pals</li>
