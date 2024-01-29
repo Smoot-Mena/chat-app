@@ -64,6 +64,7 @@ io.on("connection", (socket) => {
         socket.to(room).emit("chatroom_users", chatRoomUsers);
         socket.emit("chatroom_users", chatRoomUsers);
     });
+
 });
 
 app.listen(PORT, () => {

@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 
 const Home = () => {
+
+    const date = new Date();
+    const time = date.toDateString();
     return ( 
         <section>
             <nav style={{
@@ -65,14 +68,14 @@ const Home = () => {
                         justifyContent: "space-between",
                         padding: "0 4px",
                         alignItems: "flex-end"
-                    }}><a style={{
+                    }}><span style={{
                             color: "snow",
                             textDecoration: "none"
-                        }} href="">Read</a>
-                        <a style={{
+                        }} href="">Read</span>
+                        <span style={{
                             color: "snow",
                             textDecoration: "none"
-                        }} href="">Write</a>
+                        }} href="">Write</span>
                      </li>
                     <li style={{
                         width: "14.95vw",
@@ -83,10 +86,10 @@ const Home = () => {
                         padding: "0 4px",
                         alignItems: "flex-end"
                     }}>
-                        <a style={{
+                        <Link style={{
                             color: "snow",
                             textDecoration: "none"
-                        }} href="">IM</a>
+                        }} to="/chathome">IM</Link>
                         <Link style={{
                             color: "snow",
                             textDecoration: "none",
@@ -101,14 +104,14 @@ const Home = () => {
                         padding: "0 4px",
                         alignItems: "flex-end"
                     }}>
-                        <a style={{
+                        <span style={{
                             color: "snow",
                             textDecoration: "none"
-                        }} href="">Shop</a>
-                        <a style={{
+                        }} href="">Shop</span>
+                        <span style={{
                             color: "snow",
                             textDecoration: "none",
-                    }} href="">Internet</a>
+                    }} href="">Internet</span>
                     </li>
                     <li style={{
                         width: "9.95vw",
@@ -119,14 +122,14 @@ const Home = () => {
                         padding: "0 4px",
                         alignItems: "flex-end"
                     }}>
-                        <a style={{
+                        <span style={{
                             color: "snow",
                             textDecoration: "none"
-                        }} href="">Shop</a>
-                        <a style={{
+                        }} href="">Shop</span>
+                        <span style={{
                             color: "snow",
                             textDecoration: "none",
-                    }} href="">Internet</a>
+                    }} href="">Internet</span>
                     </li>
                     <li style={{
                         width: "39.80vw",
@@ -137,60 +140,115 @@ const Home = () => {
                         padding: "0 4px",
                         alignItems: "flex-end"
                     }}>
-                        <a style={{
+                        <span style={{
                             color: "snow",
                             textDecoration: "none"
-                        }} href="">My Favorites</a>
-                        <a style={{
+                        }} href="">My Favorites</span>
+                        <span style={{
                             color: "snow",
                             textDecoration: "none",
-                    }} href="">Calendar</a>
-                        <a style={{
+                    }} href="">Calendar</span>
+                        <span style={{
                                 color: "snow",
                                 textDecoration: "none"
-                            }} href="">Quotes</a>
-                            <a style={{
+                            }} href="">Quotes</span>
+                            <span style={{
                                 color: "snow",
                                 textDecoration: "none",
-                        }} href="">Perks</a>
+                        }} href="">Perks</span>
                     </li>
                 </ul>
             </nav>
-            <nav>
-                <ul>
-                    <li>Welcome</li>
-                    <li>Autos</li>
-                    <li>Careers & Work</li>
-                    <li>Computer Center</li>
-                    <li>Entertainment</li>
-                    <li>Games</li>
-                    <li>Health</li>
-                    <li>House & Home</li>
-                    <li>Kids Only</li>
-                    <li>Local Guide</li>
-                    <li>Music</li>
-                    <li>News</li>
-                    <li>Parenting</li>
-                    <li>Personal Finance</li>
-                    <li>Research & Learn</li>
-                    <li>Shopping</li>
-                    <li>Sports</li>
-                    <li>Teens</li>
-                    <li>Travel</li>
-                    <li>Women</li>
+            <nav style={{
+                width: "10vw",
+                backgroundColor: "lightgrey",
+                boxShadow: "2px 2px 2px black"
+            }}>
+                <header style={{
+                    backgroundColor: "darkgrey",
+                    color: "lightgrey",
+                    fontWeight: "bold",
+                    textAlign: "center",
+                    height: "25px",
+                }}>FAM Links <span style={{
+                    color: "black",
+                    fontWeight: "bold",
+                    width: "8px",
+                    height: "3px",
+                    padding: "0 5px",
+                    boxShadow: "1px 1px 2px black",
+                }}>_</span><span style={{
+                    color: "black",
+                    fontWeight: "bold",
+                    width: "8px",
+                    height: "3px",
+                    padding: "0 5px",
+                    boxShadow: "1px 1px 2px black",
+                }}>X</span></header>
+                <ul style={{
+                    listStyle: "none",
+                    color: "darkblue",
+                    fontWeight: "bold",
+                    lineHeight: "28px",
+                }}>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Welcome</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Autos</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Careers & Work</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Computer Center</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Entertainment</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Games</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Health</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>House & Home</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Kids Only</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Local Guide</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Music</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>News</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Parenting</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Personal Finance</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Research & Learn</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Shopping</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Sports</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Teens</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Travel</li>
+                    <li style={{ paddingLeft: "25px", borderBottom: "1px solid darkgrey"}}>Women</li>
                 </ul>
             </nav>
-            <main>
-                <header>Welcome to FAM <Date /> Weather</header>
-                <section>
+            <main style={{
+                position: "absolute",
+                top: "20vh",
+                left: "25vw",
+                boxShadow: "2px 2px 2px black",
+                width: "40vw",
+                minWidth: "700px",
+                display: "flex",
+                flexFlow: "row wrap"
+            }}>
+                <header style={{
+                    backgroundImage: "linear-gradient(to right, dodgerblue, darkblue, snow)",
+                    color: "snow",
+                    fontWeight: "bold",
+                    // textAlign: "center",
+                    display: "flex",
+                    justifyContent: "space-evenly",
+                    width: "inherit"
+                }}>Welcome to FAM <span>{time}</span> <span style={{ color: "yellow" }}>Weather</span></header>
+                <section style={{
+                    backgroundColor: "dodgerblue",
+                    color: "snow",
+                    width: "150px",
+                    textAlign: "center",
+                    lineHeight: "3em"
+                }}>
                     <figure>
                         <img src="" alt="" />
                         <figcaption>Logo</figcaption>
                     </figure>
-                    <a href="">Get Yo' Mail</a>
-                    <a href="">Check Yo' Pics</a>
-                    <a href="">Yo' Calendar</a>
-                    <a href="">Chat or Nah?</a>
+                    <ul>
+                        <li style={{ fontWeight: "bold" }}><p style={{ fontSize: "2em" }}>📬</p>Get Yo' Mail</li>
+                        <li style={{ fontWeight: "bold" }}><p style={{ fontSize: "2em" }}>🎞️</p>Check Yo' Pics</li>
+                        <li style={{ fontWeight: "bold" }}><p style={{ fontSize: "2em" }}>📅</p>Yo' Calendar</li>
+                        <li style={{ fontWeight: "bold" }}><p style={{ fontSize: "2em" }}>🗨️</p>Chat or Nah?</li>
+                    </ul>
                 </section>
                 <section>
                     <article>
@@ -236,9 +294,11 @@ const Home = () => {
                         </figure>
                     </article>
                 </section>
-                <section>
+                <section style={{
+                    width: "150px"
+                }}>
                     <header>Yo' Places</header>
-                    <ul>
+                    <ul style={{ listStyle: "none" }}>
                         <li>Customize Yo' Places</li>
                         <li>Greetings</li>
                         <li>Horoscopes</li>
