@@ -19,6 +19,7 @@ const ChatHome = ( {room, setRoom, username, setUsername, socket} ) => {
 
                 <label htmlFor="select-room">Select Room: </label>
                 <select name="room-selection" id="room-selection" onChange={(event) => setRoom(event.target.value)}>
+                    <option value="">---select a room---</option>
                     <option value="blue">Blue Room</option>
                     <option value="red">Red Room</option>
                     <option value="orange">Orange Room</option>
