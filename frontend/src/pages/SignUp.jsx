@@ -55,7 +55,6 @@ const SignUp = ( {setUser} ) => {
             marginLeft: "40vw",
         }}>
             <form onSubmit={handleSubmit} style={{
-                width: "inherit",
                 display: "flex",
                 flexFlow: "row wrap",
                 gap: "30px",
@@ -97,9 +96,9 @@ const SignUp = ( {setUser} ) => {
                 <button style={{
                     width: "200px",
                     padding: "10px",
-                    backgroundImage: "linear-gradient(snow, lightblue, skyblue, dodgerblue)",
+                    backgroundImage: "linear-gradient(snow, lightgreen, limegreen, green)",
                     fontWeight: "bold",
-                    color: "royalblue",
+                    color: "darkgreen",
                     border: "none",
                     borderRadius: "7px",
                     boxShadow: "2px 3px 3px black",
