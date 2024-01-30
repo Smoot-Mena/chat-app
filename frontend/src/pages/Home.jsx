@@ -66,16 +66,16 @@ const Home = () => {
                         fontWeight: "bold",
                         display: "flex",
                         justifyContent: "space-between",
-                        padding: "0 4px",
+                        padding: "0 20px",
                         alignItems: "flex-end"
                     }}><span style={{
                             color: "snow",
                             textDecoration: "none"
-                        }} href="">Read</span>
+                        }} href=""><span style={{ fontSize: "2em" }}>📬</span>Read</span>
                         <span style={{
                             color: "snow",
                             textDecoration: "none"
-                        }} href="">Write</span>
+                        }} href=""><span style={{ fontSize: "2em" }}>📝</span>Write</span>
                      </li>
                     <li style={{
                         width: "14.95vw",
@@ -83,17 +83,17 @@ const Home = () => {
                         fontWeight: "bold",
                         display: "flex",
                         justifyContent: "space-between",
-                        padding: "0 4px",
+                        padding: "0 20px",
                         alignItems: "flex-end"
                     }}>
                         <Link style={{
                             color: "snow",
                             textDecoration: "none"
-                        }} to="/chathome">IM</Link>
+                        }} to="/chathome"><span style={{ fontSize: "2em" }}>🏃🏾</span>IM</Link>
                         <Link style={{
                             color: "snow",
                             textDecoration: "none",
-                    }} to="/chathome">Chat</Link>
+                    }} to="/chathome"><span style={{ fontSize: "2em" }}>👨‍👩‍👧‍👦</span>Chat</Link>
                     </li>
                     <li style={{
                         width: "19.90vw",
@@ -101,17 +101,17 @@ const Home = () => {
                         fontWeight: "bold",
                         display: "flex",
                         justifyContent: "space-between",
-                        padding: "0 4px",
+                        padding: "0 20px",
                         alignItems: "flex-end"
                     }}>
                         <span style={{
                             color: "snow",
                             textDecoration: "none"
-                        }} href="">Shop</span>
+                        }} href=""><span style={{ fontSize: "2em" }}>🛍️</span>Shop</span>
                         <span style={{
                             color: "snow",
                             textDecoration: "none",
-                    }} href="">Internet</span>
+                    }} href=""><span style={{ fontSize: "2em" }}>🌐</span>Internet</span> 
                     </li>
                     <li style={{
                         width: "9.95vw",
@@ -124,12 +124,10 @@ const Home = () => {
                     }}>
                         <span style={{
                             color: "snow",
-                            textDecoration: "none"
-                        }} href="">Shop</span>
-                        <span style={{
-                            color: "snow",
                             textDecoration: "none",
-                    }} href="">Internet</span>
+                    }} href="">
+                        <img src="/src/assets/react.svg" alt="Logo" width="30px"/>
+                        FAM Anywhere</span>
                     </li>
                     <li style={{
                         width: "39.80vw",
@@ -137,25 +135,25 @@ const Home = () => {
                         fontWeight: "bold",
                         display: "flex",
                         justifyContent: "space-between",
-                        padding: "0 4px",
+                        padding: "0 20px",
                         alignItems: "flex-end"
                     }}>
                         <span style={{
                             color: "snow",
                             textDecoration: "none"
-                        }} href="">My Favorites</span>
+                        }} href=""><span style={{ fontSize: "2em" }}>💌</span>My Favorites</span>
                         <span style={{
                             color: "snow",
                             textDecoration: "none",
-                    }} href="">Calendar</span>
+                    }} href=""><span style={{ fontSize: "2em" }}>📅 </span>Calendar</span>
                         <span style={{
                                 color: "snow",
                                 textDecoration: "none"
-                            }} href="">Quotes</span>
+                            }} href=""><span style={{ fontSize: "2em" }}>💲</span>Quotes</span>
                             <span style={{
                                 color: "snow",
                                 textDecoration: "none",
-                        }} href="">Perks</span>
+                        }} href=""><span style={{ fontSize: "2em" }}>🎁</span>Perks</span>
                     </li>
                 </ul>
             </nav>
@@ -170,20 +168,23 @@ const Home = () => {
                     fontWeight: "bold",
                     textAlign: "center",
                     height: "25px",
-                }}>FAM Links <span style={{
+                }}><img src="/src/assets/react.svg" alt="Logo" width="15px"/>
+                    FAM Links <span style={{
                     color: "black",
                     fontWeight: "bold",
                     width: "8px",
                     height: "3px",
                     padding: "0 5px",
                     boxShadow: "1px 1px 2px black",
-                }}>_</span><span style={{
+                    backgroundColor: "lightgrey"
+                }}>_</span> <span style={{
                     color: "black",
                     fontWeight: "bold",
                     width: "8px",
                     height: "3px",
                     padding: "0 5px",
                     boxShadow: "1px 1px 2px black",
+                    backgroundColor: "lightgrey"
                 }}>X</span></header>
                 <ul style={{
                     listStyle: "none",
@@ -228,20 +229,18 @@ const Home = () => {
                     backgroundImage: "linear-gradient(to right, mediumblue, darkblue)",
                     color: "snow",
                     fontWeight: "bold",
-                    // textAlign: "center",
                     display: "flex",
                     justifyContent: "space-around",
                     width: "inherit"
-                }}>Welcome to FAM<span>{time}</span><span style={{ color: "yellow" }}>Weather</span>
+                }}><img src="/src/assets/react.svg" alt="Logo" width="20px"/>
+                    Welcome to FAM<span>{time}</span><span style={{ color: "yellow" }}>Weather</span>
                 <section style={{ backgroundColor: "lightgrey" }}>
                     <span style={{
                         color: "black",
-                        fontWeight: "bold",
                         padding: "0 6px",
                         boxShadow: "1px 1px 2px black",
                     }}>_</span><span style={{
                         color: "black",
-                        fontWeight: "bold",
                         padding: "0 6px",
                         boxShadow: "1px 1px 2px black",
                     }}>X</span>
@@ -258,11 +257,11 @@ const Home = () => {
                         <img src="/src/assets/react.svg" alt="Logo" width="100px"/>
                         <figcaption></figcaption>
                     </figure>
-                    <ul style={{ listStyle: "none" }}>
-                        <li style={{ fontWeight: "bold" }}><p style={{ fontSize: "2em" }}>📬</p>Get Yo' Mail</li>
-                        <li style={{ fontWeight: "bold" }}><p style={{ fontSize: "2em" }}>🎞️</p>Check Yo' Pics</li>
-                        <li style={{ fontWeight: "bold" }}><p style={{ fontSize: "2em" }}>📅</p>Yo' Calendar</li>
-                        <li style={{ fontWeight: "bold" }}><p style={{ fontSize: "2em" }}>🗨️</p>Chat or Nah?</li>
+                    <ul style={{ listStyle: "none", fontWeight: "bold" }}>
+                        <li><p style={{ fontSize: "2em" }}>📬</p>Get Yo' Mail</li>
+                        <li><p style={{ fontSize: "2em" }}>🎞️</p>Check Yo' Pics</li>
+                        <li><p style={{ fontSize: "2em" }}>📅</p>Yo' Calendar</li>
+                        <li><p style={{ fontSize: "2em" }}>🗨️</p>Chat or Nah?</li>
                     </ul>
                 </section>
                 <section style={{ padding: "10px", display: "flex", gap: "20px", width: "500px", flexFlow: "row wrap" }}>
@@ -338,17 +337,58 @@ const Home = () => {
             <section style={{
                 position: "absolute",
                 top: "12vh",
-                right: "0"
+                right: "2vw",
+                width: "200px",
+                backgroundColor: "lightgrey",
+                boxShadow: "2px 2px 2px black"
             }}>
-                <header>Pal List</header>
-                <ul>
-                    <li>Pals</li>
-                    <li>Family</li>
-                    <li>Co-workers</li>
+                <header style={{
+                    backgroundColor: "darkgrey",
+                    color: "lightgrey",
+                    fontWeight: "bold",
+                    textAlign: "center",
+                    height: "25px",
+                }}><img src="/src/assets/react.svg" alt="Logo" width="15px"/>
+                    Pal List <span style={{
+                    color: "black",
+                    width: "8px",
+                    height: "3px",
+                    padding: "0 5px",
+                    boxShadow: "1px 1px 2px black",
+                    backgroundColor: "lightgrey"
+                }}>_</span> <span style={{
+                    color: "black",
+                    fontWeight: "bold",
+                    width: "8px",
+                    height: "3px",
+                    padding: "0 5px",
+                    boxShadow: "1px 1px 2px black",
+                    backgroundColor: "lightgrey"
+                }}>X</span></header>
+                <header style={{
+                    textAlign: "center",
+                    height: "25px",
+                    backgroundColor: "dodgerblue",
+                    color: "snow",
+                    fontWeight: "bold",
+                }}><img src="" alt="" />🏃🏾 Pal List</header>
+                <ul style={{ listStyle: "none", backgroundColor: "snow", paddingLeft: "10px", fontWeight: "bold", lineHeight: "1.75em", height: "30vh", borderBottom: "2px solid black" }}>
+                    <li style={{ color: "snow", backgroundColor: "blue", width: "max-content", paddingLeft: "2px" }}>Pals (2/16)</li>
+                    <li>Family (0/8)</li>
+                    <li>Co-workers (0/5)</li>
                 </ul>
-                <form action="">
-                    <button>Chat</button>
-                </form>
+                <section style={{ 
+                    backgroundColor: "papayawhip", 
+                    height: "20vh", 
+                    padding: "10px",
+                    }}>
+                    <button style={{ backgroundColor: "lightcyan", padding: "5px", color: "dodgerblue", margin: "5px", border: "none", boxShadow: "2px 2px 3px black", fontWeight: "bold" }}>
+                        <p style={{ fontSize: "2em", width: "max-content",}}>🔦</p>Locate
+                    </button>
+                    <button style={{ backgroundColor: "lightcyan", padding: "5px", color: "dodgerblue", margin: "5px", border: "none", boxShadow: "2px 2px 3px black", fontWeight: "bold" }}><p style={{ fontSize: "2em", width: "max-content"}}>🏃🏾</p>IM</button>
+                    <button style={{ backgroundColor: "lightcyan", padding: "5px", color: "dodgerblue", margin: "5px", border: "none", boxShadow: "2px 2px 3px black", fontWeight: "bold" }}><p style={{ fontSize: "2em", width: "max-content"}}>🔧</p>Setup</button>
+                    <button style={{ backgroundColor: "lightcyan", padding: "5px", color: "dodgerblue", margin: "5px", border: "none", boxShadow: "2px 2px 3px black", fontWeight: "bold" }}><p style={{ fontSize: "2em", width: "max-content"}}>👨‍👩‍👧‍👦</p>Pal Chat</button>
+                </section>
             </section>
         </section>
      );
