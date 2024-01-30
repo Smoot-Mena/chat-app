@@ -8,8 +8,6 @@ require("dotenv").config();
 
 const mongoConfig = require("./config");
 
-mongoConfig();
-
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 
@@ -22,7 +20,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/auth", authRoutes);
-app.use("/api/user", authorize, userRoutes);
+app.use("/api", authorize, userRoutes);
 
 // Socket.IO Stuff
 const server = createServer(app);
@@ -74,6 +72,7 @@ io.on("connection", (socket) => {
 
 // Listening to Express
 app.listen(PORT, () => {
+    mongoConfig();
     console.log(`Listening to port ${PORT}...`);
 });
 

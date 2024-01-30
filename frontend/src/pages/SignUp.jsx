@@ -33,7 +33,7 @@ const SignUp = ( {setUser} ) => {
 
             localStorage.setItem("token", token);
 
-            const userResponse = await axios.get("/api/users", {
+            const userResponse = await axios.get("/api/home", {
                 headers: {
                     Authorization: token
                 }
@@ -43,24 +43,68 @@ const SignUp = ( {setUser} ) => {
 
             navigate("/profile");
         } catch (error) {
+            console.log(error);
             console.log(error.response.data.error);
             alert(error.response.data.error);
         }
     };
 
     return ( 
-        <section>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="username">Create Username: </label>
-                <input id="username" name="username" type="text" onChange={handleChange} value={form.username}/>
+        <section style={{
+            marginTop: "20vh",
+            marginLeft: "40vw",
+        }}>
+            <form onSubmit={handleSubmit} style={{
+                width: "inherit",
+                display: "flex",
+                flexFlow: "row wrap",
+                gap: "30px",
+                padding: "20px",
+                width: "250px",
+                backgroundImage: "linear-gradient(to top, snow, powderblue, lightskyblue)",
+                borderRadius: "7px"
+            }}>
+                <label style={{
+                    width: "200px",
+                    textAlign: "center",
+                    fontWeight: "bold",
+                }} htmlFor="username">Create Username: </label>
+                <input style={{
+                    width: "200px",
+                    padding: "10px"
+                }} id="username" name="username" type="text" onChange={handleChange} value={form.username}/>
 
-                <label htmlFor="email">What's Your Email?: </label>
-                <input id="email" name="email" type="email" onChange={handleChange} value={form.email}/>
+                <label style={{
+                    width: "200px",
+                    textAlign: "center",
+                    fontWeight: "bold",
+                }} htmlFor="email">What's Your Email?: </label>
+                <input style={{
+                    width: "200px",
+                    padding: "10px"
+                }} id="email" name="email" type="email" onChange={handleChange} value={form.email}/>
 
-                <label htmlFor="password">Create Password: </label>
-                <input id="password" name="password" type="password" onChange={handleChange} value={form.password}/>
+                <label style={{
+                    width: "200px",
+                    textAlign: "center",
+                    fontWeight: "bold",
+                }} htmlFor="password">Create Password: </label>
+                <input style={{
+                    width: "200px",
+                    padding: "10px"
+                }} id="password" name="password" type="password" onChange={handleChange} value={form.password}/>
 
-                <button>Submit</button>
+                <button style={{
+                    width: "200px",
+                    padding: "10px",
+                    backgroundImage: "linear-gradient(snow, lightblue, skyblue, dodgerblue)",
+                    fontWeight: "bold",
+                    color: "royalblue",
+                    border: "none",
+                    borderRadius: "7px",
+                    boxShadow: "2px 3px 3px black",
+                    cursor: "pointer"
+                }}>Submit</button>
             </form>
         </section>
      );

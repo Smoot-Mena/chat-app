@@ -9,7 +9,7 @@ const Home = () => {
             <nav style={{
                 borderTop: "3px solid darkblue",
                 borderBottom: "3px solid darkblue",
-                height: "80px",
+                height: "82px",
                 backgroundColor: "#333"
             }}>
                 <ul style={{
@@ -221,7 +221,8 @@ const Home = () => {
                 width: "800px",
                 minWidth: "700px",
                 display: "flex",
-                flexFlow: "row wrap"
+                flexFlow: "row wrap",
+                backgroundColor: "snow"
             }}>
                 <header style={{
                     backgroundImage: "linear-gradient(to right, mediumblue, darkblue)",
@@ -257,7 +258,7 @@ const Home = () => {
                         <img src="" alt="" />
                         <figcaption>Logo</figcaption>
                     </figure>
-                    <ul>
+                    <ul style={{ listStyle: "none" }}>
                         <li style={{ fontWeight: "bold" }}><p style={{ fontSize: "2em" }}>📬</p>Get Yo' Mail</li>
                         <li style={{ fontWeight: "bold" }}><p style={{ fontSize: "2em" }}>🎞️</p>Check Yo' Pics</li>
                         <li style={{ fontWeight: "bold" }}><p style={{ fontSize: "2em" }}>📅</p>Yo' Calendar</li>

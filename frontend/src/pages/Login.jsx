@@ -48,16 +48,52 @@ const Login = ( {setUser} ) => {
     };
 
     return ( 
-        <section>
-            <h1>Login</h1>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="username">Username: </label>
-                <input id="username" name="username" type="text" onChange={handleChange} value={form.username}/>
+        <section style={{
+            marginTop: "20vh",
+            marginLeft: "40vw",
+        }}>
+            <h1 style={{ marginLeft: "5vw", width: "200px", marginBottom: "30px", fontSize: "2em" }}>Login</h1>
+            <form onSubmit={handleSubmit} style={{
+                width: "inherit",
+                display: "flex",
+                flexFlow: "row wrap",
+                gap: "30px",
+                padding: "20px",
+                width: "250px",
+                backgroundImage: "linear-gradient(to top, snow, powderblue, lightskyblue)",
+                borderRadius: "7px"
+            }}>
+                <label style={{
+                    width: "200px",
+                    textAlign: "center",
+                    fontWeight: "bold",
+                }} htmlFor="username">Username: </label>
+                <input style={{
+                    width: "200px",
+                    padding: "10px"
+                }} id="username" name="username" type="text" onChange={handleChange} value={form.username}/>
 
-                <label htmlFor="password">Password: </label>
-                <input id="password" name="password" type="password" onChange={handleChange} value={form.password}/>
+                <label style={{
+                    width: "200px",
+                    textAlign: "center",
+                    fontWeight: "bold",
+                }} htmlFor="password">Password: </label>
+                <input style={{
+                    width: "200px",
+                    padding: "10px"
+                }} id="password" name="password" type="password" onChange={handleChange} value={form.password}/>
 
-                <button>Submit</button>
+                <button style={{
+                    width: "200px",
+                    padding: "10px",
+                    backgroundImage: "linear-gradient(snow, lightblue, skyblue, dodgerblue)",
+                    fontWeight: "bold",
+                    color: "royalblue",
+                    border: "none",
+                    borderRadius: "7px",
+                    boxShadow: "2px 3px 3px black",
+                    cursor: "pointer"
+                }}>Submit</button>
             </form>
         </section>
      );
