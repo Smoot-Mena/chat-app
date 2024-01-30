@@ -1,6 +1,10 @@
-const Profile = () => {
+const Profile = ( {username, email} ) => {
     return ( 
-        <section>Profile Page Here!</section>
+        <section>
+            <h1>Profile</h1>
+            <p>Username: {username}</p>
+            <p>Email: {email}</p>
+        </section>
      );
 }
  

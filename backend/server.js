@@ -10,12 +10,21 @@ const mongoConfig = require("./config");
 
 mongoConfig();
 
+const authRoutes = require("./routes/authRoutes");
+const userRoutes = require("./routes/userRoutes");
+
+const { authorize } = require("./middleware/authMiddleware");
+
 const PORT = 3216;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
+app.use("/auth", authRoutes);
+app.use("/api/user", authorize, userRoutes);
+
+// Socket.IO Stuff
 const server = createServer(app);
 
 const io = new Server( server, {
@@ -23,10 +32,6 @@ const io = new Server( server, {
         origin: "http://localhost:5173",
         methods: ["GET", "POST"],
     },
-});
-
-app.get("/", (req, res) => {
-    res.send("<h1>Root Page</h1>");
 });
 
 const CHAT_BOT = "ChatBot";
@@ -67,6 +72,7 @@ io.on("connection", (socket) => {
 
 });
 
+// Listening to Express
 app.listen(PORT, () => {
     console.log(`Listening to port ${PORT}...`);
 });

@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ( {username, setUser} ) => {
+
+    const logout = () => {
+        localStorage.removeItem("token");
+        setUser({});
+    };
+
     return ( 
         <nav style={{
             backgroundColor: "lightgrey"
@@ -19,14 +25,52 @@ const Navbar = () => {
                         fontWeight: "bold"
                     }}>Home</Link>
                 </li>
-                <li>
-                    <Link to="/profile" 
-                        style={{
-                            textDecoration: "none",
-                            color: "#333",
-                            fontWeight: "bold"
-                        }}>Profile</Link>
+               {username ? 
+               <>
+                    <li style={{
+                                textDecoration: "none",
+                                color: "navy",
+                                fontWeight: "bold"
+                            }}>Welcome {username}</li>
+                    <li>
+                        <Link to="/profile" 
+                            style={{
+                                textDecoration: "none",
+                                color: "#333",
+                                fontWeight: "bold"
+                            }}>Profile
+                        </Link>
                 </li>
+                    <li>
+                        <Link to="/login" style={{
+                                textDecoration: "none",
+                                color: "#333",
+                                fontWeight: "bold"
+                            }}>
+                            Logout
+                        </Link>
+                    </li>
+               </> : 
+               <>
+                    <li>
+                        <Link to="/login" 
+                            style={{
+                                textDecoration: "none",
+                                color: "#333",
+                                fontWeight: "bold"
+                            }}>Login
+                        </Link>
+                </li>
+                    <li>
+                        <Link to="/signup" style={{
+                                textDecoration: "none",
+                                color: "#333",
+                                fontWeight: "bold"
+                            }}>
+                            Signup
+                        </Link>
+                    </li>
+                </>}         
             </ul>
         </nav>
      );
