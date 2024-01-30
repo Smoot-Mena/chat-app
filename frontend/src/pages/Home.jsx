@@ -218,7 +218,7 @@ const Home = () => {
                 top: "20vh",
                 left: "25vw",
                 boxShadow: "2px 2px 2px black",
-                width: "800px",
+                width: "850px",
                 minWidth: "700px",
                 display: "flex",
                 flexFlow: "row wrap",
@@ -254,9 +254,9 @@ const Home = () => {
                     textAlign: "center",
                     lineHeight: "3em"
                 }}>
-                    <figure>
-                        <img src="" alt="" />
-                        <figcaption>Logo</figcaption>
+                    <figure style={{ marginTop: "10px" }}>
+                        <img src="/src/assets/react.svg" alt="Logo" width="100px"/>
+                        <figcaption></figcaption>
                     </figure>
                     <ul style={{ listStyle: "none" }}>
                         <li style={{ fontWeight: "bold" }}><p style={{ fontSize: "2em" }}>📬</p>Get Yo' Mail</li>
@@ -265,9 +265,9 @@ const Home = () => {
                         <li style={{ fontWeight: "bold" }}><p style={{ fontSize: "2em" }}>🗨️</p>Chat or Nah?</li>
                     </ul>
                 </section>
-                <section style={{ padding: "10px", display: "flex", gap: "20px", width: "500px" }}>
+                <section style={{ padding: "10px", display: "flex", gap: "20px", width: "500px", flexFlow: "row wrap" }}>
                     <article style={{ 
-                        width: "200px",
+                        width: "150px",
                         }}>
                         <figure>
                             <img src="src/assets/city-skyline.jpg" alt="Skyline" width="150px"/>
@@ -275,47 +275,44 @@ const Home = () => {
                         </figure>
                         <p style={{ color: "blue", textDecoration: "underline" }}>Top 10 cities list</p>
                     </article>
-                    <article>
+                    <article style={{ lineHeight: "1.7em" }}>
                         <figure>
                             <img src="src/assets/white-outfit.jpg" alt="Fashion trends" width="150px"/>
                             <figcaption style={{ fontWeight: "bold" }}>Fashion Trends</figcaption>
                             <p style={{ color: "purple", textDecoration: "underline" }}>Hot new styles here</p>
+                            <p style={{ fontWeight: "bold" }}>Accessories:</p>
+                            <p style={{ color: "blue", textDecoration: "underline" }}>Watches & Belts</p>
                         </figure>
                     </article>
-                    <article>
-                        <p>Top 10 Songs of the Month</p>
-                        <p></p>
-                        <p></p>
-                    </article>
-                    <article>
-                        <p>Top 10 Songs of the Month</p>
-                        <p></p>
-                        <p></p>
+                    <article style={{ width: "120px", lineHeight: "1.7em" }}>
+                        <p style={{ color: "blue", textDecoration: "underline" }}>Top Brands</p>
+                        <p style={{ color: "blue", textDecoration: "underline" }}>Shop shoes</p>
+                        <p style={{ color: "purple", textDecoration: "underline" }}>Shop jewelry</p>
                     </article>
                     <article>
                         <figure>
-                            <img src="" alt="" />
-                            <figcaption></figcaption>
-                            <p></p>
+                            <img src="/src/assets/concert.jpg" alt="Concert" width="100px"/>
+                            <figcaption style={{ fontWeight: "bold" }}>Slipknot concert</figcaption>
+                            <p style={{ color: "blue", textDecoration: "underline" }}>Purchase tickets here</p>
                         </figure>
                     </article>
-                    <article>
-                        <figure>
-                            <img src="" alt="" />
-                            <figcaption></figcaption>
-                            <p></p>
-                        </figure>
+                    <article style={{ lineHeight: "1.7em" }}>
+                        <p style={{ fontWeight: "bold" }}>Concert season is here</p>
+                        <p style={{ color: "blue", textDecoration: "underline" }}>Top 10 Songs of the Month</p>
+                        <p style={{ color: "blue", textDecoration: "underline" }}>Grammy nominees</p>
+                        <p style={{ fontWeight: "bold", color: "red" }}>Top News: </p>
+                        <p style={{ color: "blue", textDecoration: "underline" }}>London Bridge has fallen!</p>
+                        <p style={{ color: "blue", textDecoration: "underline" }}>Humpty Dumpty suffers from fall</p>
+                        <p style={{ color: "purple", textDecoration: "underline" }}>Wolf arrested for harrassing pigs</p>
                     </article>
                 </section>
                 <section style={{
-                    width: "150px",
-                    // position: "absolute",
-                    // top: "3vh",
-                    // right: "0"
+                    width: "200px",
+                    backgroundColor: "lightcyan"
                 }}>
-                    <header>Yo' Places</header>
-                    <ul style={{ listStyle: "none" }}>
-                        <li>Customize Yo' Places</li>
+                    <header style={{ fontWeight: "bold", color: "snow", backgroundColor: "dodgerblue", padding: "0 5px", fontSize: "1.5em" }}>Yo' Places</header>
+                    <ul style={{ listStyle: "square", marginLeft: "20px", color: "mediumorchid", fontWeight: "bold", lineHeight: "1.5em" }}>
+                        <li style={{ color: "deepskyblue" }}>Customize Yo' Places</li>
                         <li>Greetings</li>
                         <li>Horoscopes</li>
                         <li>Local News</li>
@@ -326,6 +323,15 @@ const Home = () => {
                         <li>Stock Quotes</li>
                         <li>What's New on FAM</li>
                         <li>White Pages</li>
+                    </ul>
+                    <header style={{ fontWeight: "bold", color: "snow", backgroundColor: "dodgerblue", padding: "0 5px", fontSize: "1.2em" }}>Check This Out</header>
+                    <ul style={{ listStyle: "square", marginLeft: "20px", color: "mediumorchid", fontWeight: "bold", lineHeight: "1.75em" }}>
+                        <li style={{ color: "crimson" }}>Member Rewards</li>
+                        <li style={{ color: "blue" }}>Order Shopping</li>
+                        <br />
+                        <li style={{ color: "crimson" }}>FAM Help</li>
+                        <li>Go to Internet</li>
+                        <li>Parental Controls</li>
                     </ul>
                 </section>
             </main>
