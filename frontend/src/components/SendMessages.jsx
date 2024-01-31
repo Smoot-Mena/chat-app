@@ -15,15 +15,28 @@ const SendMessages = ( {socket, username, room} ) => {
     };
     return ( 
         <section>
-            <form action="">
+            <form >
                 <input type="text" value={message} onChange={(event) => setMessage(event.target.value)} style={{
-                        width: "70vw",
-                        height: "10vh",
-                        border: "5px solid purple"
+                        width: "50vw",
+                        height: "5vh",
+                        border: "2px solid cadetblue",
+                        color: "navy", 
+                        backgroundColor: "azure",
+                        boxShadow: "2px 3px 3px black",
+                        marginBottom: "5px",
                     }} />
                     <button style={{
-                        width: "10vw",
-                        height: "10vh"
+                        width: "max-content",
+                        padding: "0 10px",
+                        height: "5vh",
+                        color: "steelblue",
+                        fontWeight: "bold",
+                        backgroundImage: "linear-gradient(snow, lightblue, dodgerblue)",
+                        border: "none",
+                        marginLeft: "5px", 
+                        boxShadow: "2px 3px 3px black",
+                        cursor: "pointer",
+                        borderRadius: "7px"
                     }} onClick={messageSend}>Send ↪</button>
             </form>
         </section>

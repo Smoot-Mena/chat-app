@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 const { createServer } = require("node:http");
 const { Server } = require("socket.io");
+const leaveRoom = require("./components/leaveRoom");
 
 require("dotenv").config();
 
@@ -32,7 +33,7 @@ const io = new Server( server, {
     },
 });
 
-const CHAT_BOT = "ChatBot";
+const CHAT_BOT = "ChatBotAdmin";
 let chatRoom = "";
 let allUsers = []; // all of the current users in the chat room
 
@@ -68,11 +69,28 @@ io.on("connection", (socket) => {
         socket.emit("chatroom_users", chatRoomUsers);
     });
 
+    // Controls users sending messages in chat
     socket.on("send_message", (data) => {
         const {message, username, room, _createdTime} = data;
         io.in(room).emit("receive_message", data);
     });
 
+    // Lets users leave rooms
+    socket.on("leave_room", (data) => {
+        const {username, room} = data;
+        socket.leave(room);
+        const _createdTime = Date.now();
+
+        //Deletes user from memory
+        allUsers = leaveRoom(socket.id, allUsers);
+        socket.to(room).emit("chatroom_users", allUsers);
+        socket.to(room).emit("receive_message", {
+            username: CHAT_BOT,
+            message: `${username} has left the chat.`,
+            _createdTime
+        });
+        console.log(`${username} has left the chat.`);
+    });
 });
 
 // Listening to Express

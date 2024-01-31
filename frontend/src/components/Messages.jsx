@@ -27,8 +27,8 @@ const Messages = ( {socket} ) => {
         <section>{messagesReceived.map((message, index) => (
             <section key={index}>
                 <section>
-                    <span>{message.username}</span>
-                    <span>{formatTimestamp(message._createdTime)}</span>
+                    <span style={{ color: "blue", fontWeight: "bold", fontSize: "1.1em" }}>{message.username}</span> -
+                    <span><i style={{ color: "purple", fontWeight: "bold", fontSize: ".65em" }}>({formatTimestamp(message._createdTime)})</i></span>
                 </section>
                 <section>
                     <p>{message.message}</p>

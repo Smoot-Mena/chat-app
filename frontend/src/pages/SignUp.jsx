@@ -54,6 +54,7 @@ const SignUp = ( {setUser} ) => {
             marginTop: "20vh",
             marginLeft: "40vw",
         }}>
+            <h1 style={{ marginLeft: "4vw", width: "200px", marginBottom: "30px", fontSize: "2em" }}>Signup</h1>
             <form onSubmit={handleSubmit} style={{
                 display: "flex",
                 flexFlow: "row wrap",
