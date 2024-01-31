@@ -12,7 +12,9 @@ const ChatRoom = ( {room, setRoom, username, setUsername, socket} ) => {
                 width: "80vw",
                 height: "70vh",
                 border: "5px solid darkblue",
-                justifyContent: "center"
+                justifyContent: "center",
+                overflow: "scroll",
+                scrollSnapAlign: "start"
             }}>
                 <Messages socket={socket} />
             </section>

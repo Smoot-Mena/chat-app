@@ -379,7 +379,7 @@ const Home = () => {
                 </ul>
                 <section style={{ 
                     backgroundColor: "papayawhip", 
-                    height: "20vh", 
+                    height: "25vh", 
                     padding: "10px",
                     }}>
                     <button style={{ backgroundColor: "lightcyan", padding: "5px", color: "dodgerblue", margin: "5px", border: "none", boxShadow: "2px 2px 3px black", fontWeight: "bold" }}>
