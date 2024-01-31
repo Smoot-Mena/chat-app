@@ -4,9 +4,11 @@ const SendMessages = ( {socket, username, room} ) => {
 
     const [message, setMessage] = useState("");
 
-    const messageSend = () => {
-        if (message !== "") {
-            const _createdTime = Date.now();
+    const messageSend = (event) => {
+        event.preventDefault();
+        console.log(message);
+        if (message) {
+            let _createdTime = Date.now();
             socket.emit("send_message", {username, room, message, _createdTime});
             setMessage("");
         };

@@ -46,7 +46,7 @@ io.on("connection", (socket) => {
         socket.join(room); // the user joins a socket room
 
         let _createdTime = Date.now(); // Adds timestamp
-        // Sends public message to all users at once, except newbies
+        // Sends public message to all users currently in the room
         socket.to(room).emit("receive_message", {
             message: `${username} has just entered the chat room`,
             username: CHAT_BOT,
@@ -66,6 +66,11 @@ io.on("connection", (socket) => {
         let chatRoomUsers = allUsers.filter((user) => user.room === room);
         socket.to(room).emit("chatroom_users", chatRoomUsers);
         socket.emit("chatroom_users", chatRoomUsers);
+    });
+
+    socket.on("send_message", (data) => {
+        const {message, username, room, _createdTime} = data;
+        io.in(room).emit("receive_message", data);
     });
 
 });

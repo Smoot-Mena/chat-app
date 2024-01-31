@@ -53,7 +53,7 @@ function App() {
       <Navbar username={user.username} setUser={setUser} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
+        {/* <Route path="/profile" element={<Profile />} /> */}
         <Route path="/chathome" element={<ChatHome username={username} setUsername={setUsername} room={room} setRoom={setRoom} socket={socket} />} />
         <Route path="/chatroom" element={<ChatRoom username={username} room={room} socket={socket} />} />
         {loggedIn ? 
