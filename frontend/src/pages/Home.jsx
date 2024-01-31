@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+    const navigate = useNavigate();
+
+    const goToChat = (event) => {
+        event.preventDefault();
+        navigate("/chathome", {replace: true});
+    };
 
     const date = new Date();
     const time = date.toDateString();
@@ -16,7 +24,6 @@ const Home = () => {
                     listStyle: "none",
                     display: "flex",
                     gap: "2px"
-                    // justifyContent: "space-evenly"
                 }}>
                     <li style={{
                         width: "15vw",
@@ -261,7 +268,7 @@ const Home = () => {
                         <li><p style={{ fontSize: "2em" }}>📬</p>Get Yo' Mail</li>
                         <li><p style={{ fontSize: "2em" }}>🎞️</p>Check Yo' Pics</li>
                         <li><p style={{ fontSize: "2em" }}>📅</p>Yo' Calendar</li>
-                        <li><p style={{ fontSize: "2em" }}>🗨️</p>Chat or Nah?</li>
+                        <li><Link style={{ color: "snow", textDecoration: "none" }} to="/chathome"><p style={{ fontSize: "2em" }}>🗨️</p>Chat or Nah?</Link></li>
                     </ul>
                 </section>
                 <section style={{ padding: "10px", display: "flex", gap: "20px", width: "500px", flexFlow: "row wrap" }}>
@@ -385,9 +392,9 @@ const Home = () => {
                     <button style={{ backgroundColor: "lightcyan", padding: "5px", color: "dodgerblue", margin: "5px", border: "none", boxShadow: "2px 2px 3px black", fontWeight: "bold" }}>
                         <p style={{ fontSize: "2em", width: "max-content",}}>🔦</p>Locate
                     </button>
-                    <button style={{ backgroundColor: "lightcyan", padding: "5px", color: "dodgerblue", margin: "5px", border: "none", boxShadow: "2px 2px 3px black", fontWeight: "bold" }}><p style={{ fontSize: "2em", width: "max-content"}}>🏃🏾</p>IM</button>
+                    <button style={{ backgroundColor: "lightcyan", padding: "5px", color: "dodgerblue", margin: "5px", border: "none", boxShadow: "2px 2px 3px black", fontWeight: "bold", cursor: "pointer" }} onClick={goToChat}><p style={{ fontSize: "2em", width: "max-content"}}>🏃🏾</p>IM</button>
                     <button style={{ backgroundColor: "lightcyan", padding: "5px", color: "dodgerblue", margin: "5px", border: "none", boxShadow: "2px 2px 3px black", fontWeight: "bold" }}><p style={{ fontSize: "2em", width: "max-content"}}>🔧</p>Setup</button>
-                    <button style={{ backgroundColor: "lightcyan", padding: "5px", color: "dodgerblue", margin: "5px", border: "none", boxShadow: "2px 2px 3px black", fontWeight: "bold" }}><p style={{ fontSize: "2em", width: "max-content"}}>👨‍👩‍👧‍👦</p>Pal Chat</button>
+                    <button style={{ backgroundColor: "lightcyan", padding: "5px", color: "dodgerblue", margin: "5px", border: "none", boxShadow: "2px 2px 3px black", fontWeight: "bold", cursor: "pointer" }} onClick={goToChat}><p style={{ fontSize: "2em", width: "max-content"}}>👨‍👩‍👧‍👦</p>Pal Chat</button>
                 </section>
             </section>
         </section>
