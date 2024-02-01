@@ -8,7 +8,7 @@ An app that looks like AOL that has a chat room feature. Anyone with the link to
 
 ## Installation
 
-Use [npm](https://docs.npmjs.com/about-npm) to install chat-app's dependencies.
+Use [npm](https://docs.npmjs.com/about-npm) to install FAM's dependencies.
 
 ```bash
 npm install
