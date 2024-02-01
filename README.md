@@ -23,3 +23,5 @@ npm install
 #### Planning Board: [Monday.com](https://ms-team273616.monday.com/boards/5931763524) contains the tasks that were followed to build out the app. Links to reference images are included. 
 
 #### Wire-Frame: There isn't a wire-frame available since the app is literally an AOL clone. Images used to build the CSS styles are included in the [Monday.com](https://ms-team273616.monday.com/boards/5931763524).
+
+#### Entity-Relationship Diagram: [Draw.io](https://app.diagrams.net/#G1_etMieuwQeQTugrB8fJIQCbkxEMT8Bog) is what I used to draw the ERD. 
