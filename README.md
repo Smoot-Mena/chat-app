@@ -1,6 +1,6 @@
-# chat-app
+# FAM
 
-chat-app is a chat app that looks like a reboot of AOL.
+F(ake) AM(erica online)  is a chat app that looks like a reboot of AOL.
 
 ## Description
 
