@@ -29,7 +29,7 @@ const SendMessages = ( {socket, username, room} ) => {
                         width: "max-content",
                         padding: "0 10px",
                         height: "5vh",
-                        color: "steelblue",
+                        color: "royalblue",
                         fontWeight: "bold",
                         backgroundImage: "linear-gradient(snow, lightblue, dodgerblue)",
                         border: "none",
