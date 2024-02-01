@@ -8,8 +8,9 @@ import ChatHome from "./pages/ChatHome";
 import { useEffect, useState } from "react";
 import io from "socket.io-client";
 import ChatRoom from "./pages/ChatRoom";
-import axios from "axios";
+// import axios from "axios";
 import { Navigate } from "react-router-dom";
+import axios from "./api";
 
 const socket = io.connect("http://localhost:5175");
 
