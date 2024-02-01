@@ -1,5 +1,5 @@
 // import axios from "axios";
-import axios from "../api";
+import customAxiosAndBaseURL from "../api";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -23,7 +23,7 @@ const SignUp = ( {setUser} ) => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post("/auth/signup", form);
+            const response = await customAxiosAndBaseURL.post("/auth/signup", form);
             const token = response.data.token;
             console.log(token);
 
